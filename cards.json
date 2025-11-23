@@ -27,8 +27,28 @@
         "Version 2 - Every time I talk to you, I feel happier."
       ]
     }
+  },
+  
+  "3": {
+      "version": 3,
+      "female_cards": [
+        "Version 3 - Being with you feels like home to me.",
+        "Version 3 - Your presence makes everything better.",
+        "Version 3 - I love how we understand each other without words.",
+        "Version 3 - You make my world feel complete.",
+        "Version 3 - You are the most comforting person I know."
+      ],
+      "male_cards": [
+        "Version 3 - You always know how to cheer me up.",
+        "Version 3 - I feel lucky to have you in my life.",
+        "Version 3 - You inspire me every single day.",
+        "Version 3 - I love how natural everything feels with you.",
+        "Version 3 - Every time I talk to you, I feel happier."
+      ]
+    }
   }
 }
+
 
 
 

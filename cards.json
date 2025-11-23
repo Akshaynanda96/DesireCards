@@ -3,18 +3,10 @@
     "1": {
       "version": 1,
       "female_cards": [
-        "Version 1 - You make me  my heart feel calm whenever you're near.",
-        "Version 1 - I feel safest when I’m with you.",
-        "Version 1 - You always know how to make me smile.",
-        "Version 1 - I love the way you look at me.",
-        "Version 1 - I enjoy every moment we spend together."
+        "Version 1 -samaj gya samjh gay"
       ],
       "male_cards": [
-        "Version 1 - You make me want to become the best version of myself.",
-        "Version 1 - I think about you more than I admit.",
-        "Version 1 - You brighten my whole day just by being in it.",
-        "Version 1 - I love the way you care about everything.",
-        "Version 1 - You make everything around you feel warm."
+        "Version 1 - ye bhi samajh gaya"
       ]
     },
 
@@ -37,4 +29,5 @@
     }
   }
 }
+
 

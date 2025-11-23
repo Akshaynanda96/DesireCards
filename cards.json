@@ -1,0 +1,39 @@
+{
+  "versions": {
+    "1": {
+      "version": 1,
+      "female_cards": [
+        "Version 1 - You make my heart feel calm whenever you're near.",
+        "Version 1 - I feel safest when I’m with you.",
+        "Version 1 - You always know how to make me smile.",
+        "Version 1 - I love the way you look at me.",
+        "Version 1 - I enjoy every moment we spend together."
+      ],
+      "male_cards": [
+        "Version 1 - You make me want to become the best version of myself.",
+        "Version 1 - I think about you more than I admit.",
+        "Version 1 - You brighten my whole day just by being in it.",
+        "Version 1 - I love the way you care about everything.",
+        "Version 1 - You make everything around you feel warm."
+      ]
+    },
+
+    "2": {
+      "version": 2,
+      "female_cards": [
+        "Version 2 - Being with you feels like home to me.",
+        "Version 2 - Your presence makes everything better.",
+        "Version 2 - I love how we understand each other without words.",
+        "Version 2 - You make my world feel complete.",
+        "Version 2 - You are the most comforting person I know."
+      ],
+      "male_cards": [
+        "Version 2 - You always know how to cheer me up.",
+        "Version 2 - I feel lucky to have you in my life.",
+        "Version 2 - You inspire me every single day.",
+        "Version 2 - I love how natural everything feels with you.",
+        "Version 2 - Every time I talk to you, I feel happier."
+      ]
+    }
+  }
+}

@@ -3,10 +3,10 @@
     "1": {
       "version": 1,
       "female_cards": [
-        "Version 1 -samaj gya samjh gay"
+        "Version 1 -nhi smajha gya samjh gay"
       ],
       "male_cards": [
-        "Version 1 - ye bhi samajh gaya"
+        "Version 1 - ye bhi  nhi samajh gaya"
       ]
     },
 
@@ -29,5 +29,6 @@
     }
   }
 }
+
 
 

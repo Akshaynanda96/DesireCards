@@ -9,7 +9,6 @@
         "Version 1 - ye bhi  nhi samajh gaya"
       ]
     },
-
     "2": {
       "version": 2,
       "female_cards": [
@@ -26,10 +25,8 @@
         "Version 2 - I love how natural everything feels with you.",
         "Version 2 - Every time I talk to you, I feel happier."
       ]
-    }
-  },
-  
-  "3": {
+    },
+    "3": {
       "version": 3,
       "female_cards": [
         "Version 3 - Being with you feels like home to me.",
@@ -48,7 +45,3 @@
     }
   }
 }
-
-
-
-

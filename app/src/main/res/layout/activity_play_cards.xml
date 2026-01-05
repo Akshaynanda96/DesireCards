@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:id="@+id/main"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#1C2526"
+		tools:context=".PlayCards">
+
+	<!-- Uno-like Play Card -->
+	<androidx.cardview.widget.CardView
+			android:id="@+id/play_card"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="16dp"
+			android:layout_marginTop="24dp"
+			android:layout_marginBottom="24dp"
+			app:cardCornerRadius="20dp"
+			app:cardElevation="8dp"
+			app:cardBackgroundColor="@android:color/transparent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent">
+
+		<!-- Gradient Background Container -->
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:padding="16dp"
+				android:background="@drawable/secondimg">
+
+			<!-- Card Title -->
+			<TextView
+					android:id="@+id/card_title"
+					android:layout_width="match_parent"
+					android:layout_height="78dp"
+					android:text="@string/wild_card"
+					android:textSize="15sp"
+					android:textStyle="bold"
+					android:textColor="#FFFFFF"
+					android:gravity="center"
+					android:layout_marginTop="12dp"
+					android:layout_marginBottom="16dp"
+					/>
+
+			<!-- Card Icon -->
+
+			<!-- Action Description -->
+			<ImageView
+					android:id="@+id/card_icon"
+					android:layout_width="194dp"
+					android:layout_height="176dp"
+					android:src="@drawable/p1"
+					android:contentDescription="@string/card_icon"
+					android:layout_gravity="center_horizontal"
+					android:layout_marginBottom="16dp" />
+
+			<TextView
+					android:padding="5dp"
+					android:id="@+id/card_action"
+					android:background="#95000000"
+					android:layout_width="match_parent"
+					android:layout_height="332dp"
+					android:text="@string/choose_any_color_to_continue_play_all_players_must_draw_a_card_from_the_deck"
+					android:textSize="16sp"
+					android:textColor="#E6E6E6"
+					android:gravity="center"
+					android:layout_marginTop="8dp" />
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

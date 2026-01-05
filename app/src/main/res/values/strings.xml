@@ -1,0 +1,26 @@
+<resources>
+	<string name="app_name">Desire Cards</string>
+	<string name="card_icon">Card Icon</string>
+	<string name="choose_any_color_to_continue_play_all_players_must_draw_a_card_from_the_deck">Choose any color to continue play! All players must draw a card from the deck.</string>
+	<string name="wild_card">WILD CARD</string>
+	<string name="welcome_message">welcome_message</string>
+	<string name="start_playing">start_playing</string>
+	<string name="app_icon">app_icon</string>
+	<string name="enter_your_name">enter_your_name</string>
+	<string name="female">female</string>
+	<string name="male">male</string>
+	<string name="enter_male_name">enter_male_name</string>
+	<string name="enter_female_name">enter_female_name</string>
+	<string name="todo">TODO</string>
+	<string name="you">YOU</string>
+	<string name="love">LOVE</string>
+	<string name="go_to_group_chat">go to group chat</string>
+	<string name="enter_your_details">Enter your details</string>
+	<string name="start">Start</string>
+	<string name="devloped_by_akshay">devloped by akshay</string>
+	<string name="loves">LoVE</string>
+	<string name="button">Button</string>
+	<string name="who_s_turn">Who\'s turn?</string>
+	<string name="please_enter_both_name">Please Enter Both Name</string>
+	<string name="spinning_wheel">Spinning Wheel</string>
+</resources>

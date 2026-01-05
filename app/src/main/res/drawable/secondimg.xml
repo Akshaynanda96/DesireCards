@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<!-- Background image -->
+	<item android:drawable="@drawable/bg2" />
+
+	<!-- Semi-transparent overlay -->
+	<item>
+		<shape android:shape="rectangle">
+			<solid android:color="#C2000000"/> <!-- 40% black -->
+		</shape>
+	</item>
+</layer-list>

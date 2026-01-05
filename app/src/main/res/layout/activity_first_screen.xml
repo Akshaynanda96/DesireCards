@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:background="#4A0E4A">
+
+<!--	<TextView-->
+<!--			android:id="@+id/discovery_title"-->
+<!--			android:layout_width="148dp"-->
+<!--			android:layout_height="wrap_content"-->
+<!--			android:text="@string/app_name"-->
+<!--			android:textSize="25sp"-->
+<!--			android:textColor="#FFFFFF"-->
+<!--			android:layout_marginTop="80dp"-->
+<!--			tools:ignore="RelativeOverlap"-->
+<!--			android:layout_alignParentEnd="true"-->
+<!--			android:layout_marginEnd="134dp"-->
+<!--			android:layout_alignParentStart="true"-->
+<!--			android:layout_marginStart="129dp" />-->
+
+<!--	<com.google.android.material.card.MaterialCardView-->
+<!--			android:layout_width="80dp"-->
+<!--			android:layout_height="80dp"-->
+<!--			android:layout_centerInParent="true"-->
+<!--			android:backgroundTint="#E91E63"-->
+<!--			app:cardCornerRadius="40dp">-->
+
+<!--		<TextView-->
+<!--				android:layout_width="match_parent"-->
+<!--				android:layout_height="match_parent"-->
+<!--				android:text="@string/you"-->
+<!--				android:textSize="14sp"-->
+<!--				android:textColor="#FFFFFF"-->
+<!--				android:gravity="center"-->
+<!--				android:textStyle="bold" />-->
+<!--	</com.google.android.material.card.MaterialCardView>-->
+
+<!--	&lt;!&ndash; Surrounding bubbles (simplified as circular ImageViews; replace src with actual bubble icons) &ndash;&gt;-->
+<!--	<ImageView-->
+<!--			android:layout_width="150dp"-->
+<!--			android:layout_height="150dp"-->
+<!--			android:layout_alignParentTop="true"-->
+<!--			android:layout_centerHorizontal="true"-->
+<!--			android:layout_marginTop="200dp"-->
+<!--			android:contentDescription="@string/todo"-->
+<!--			android:src="@mipmap/firstimage"-->
+<!--			android:backgroundTint="#E91E63"-->
+<!--			android:scaleType="centerCrop"-->
+<!--			android:layout_marginBottom="20dp" />-->
+
+<!--	<ImageView-->
+<!--			android:layout_width="190dp"-->
+<!--			android:layout_height="190dp"-->
+<!--			android:layout_alignParentStart="true"-->
+<!--			android:layout_marginStart="-8dp"-->
+<!--			android:contentDescription="@string/todo"-->
+<!--			android:src="@mipmap/secondmage_foreground"-->
+<!--			android:backgroundTint="#E91E63"-->
+<!--			android:scaleType="centerCrop"-->
+<!--			android:layout_alignParentBottom="true"-->
+<!--			android:layout_marginBottom="268dp"-->
+<!--			android:layout_marginTop="273dp"-->
+<!--			android:layout_alignParentTop="true" />-->
+
+<!--	<ImageView-->
+<!--			android:layout_width="250dp"-->
+<!--			android:layout_height="250dp"-->
+<!--			android:layout_alignParentEnd="true"-->
+<!--			android:layout_marginEnd="-33dp"-->
+<!--			android:contentDescription="@string/todo"-->
+<!--			android:src="@mipmap/thiredimage_foreground"-->
+<!--			android:backgroundTint="#E91E63"-->
+<!--			android:scaleType="centerCrop"-->
+<!--			android:layout_alignParentBottom="true"-->
+<!--			android:layout_marginBottom="272dp"-->
+<!--			android:layout_marginTop="259dp"-->
+<!--			android:layout_alignParentTop="true" />-->
+
+<!--	&lt;!&ndash; Bottom buttons &ndash;&gt;-->
+
+<!--	<ImageView-->
+<!--			android:layout_width="wrap_content"-->
+<!--			android:layout_height="135dp"-->
+<!--			android:layout_alignParentBottom="true"-->
+<!--			android:layout_marginBottom="174dp"-->
+<!--			android:contentDescription="@string/todo"-->
+<!--			android:src="@mipmap/fourthimage_foreground"-->
+<!--			android:backgroundTint="#E91E63"-->
+<!--			android:scaleType="centerCrop"-->
+<!--			android:layout_alignParentEnd="true"-->
+<!--			android:layout_marginEnd="81dp"-->
+<!--			android:layout_alignParentStart="true"-->
+<!--			android:layout_marginStart="101dp" />-->
+
+<!--	<LinearLayout-->
+<!--			android:layout_width="match_parent"-->
+<!--			android:layout_height="wrap_content"-->
+<!--			android:orientation="vertical"-->
+<!--			android:gravity="center"-->
+<!--			android:layout_alignParentBottom="true"-->
+<!--			android:padding="24dp"-->
+<!--			android:layout_marginBottom="2dp">-->
+
+<!--		<com.google.android.material.button.MaterialButton-->
+<!--				android:layout_width="wrap_content"-->
+<!--				android:layout_height="48dp"-->
+<!--				android:text="@string/go_to_group_chat"-->
+<!--				android:textColor="#FFFFFF"-->
+<!--				style="@style/Widget.MaterialComponents.Button.OutlinedButton"-->
+<!--				android:layout_marginBottom="16dp" />-->
+
+<!--		<TextView-->
+<!--				android:layout_width="wrap_content"-->
+<!--				android:layout_height="wrap_content"-->
+<!--				android:text="@string/love"-->
+<!--				android:textSize="24sp"-->
+<!--				android:textColor="#E91E63"-->
+<!--				android:textStyle="bold" />-->
+<!--	</LinearLayout>-->
+
+</RelativeLayout>

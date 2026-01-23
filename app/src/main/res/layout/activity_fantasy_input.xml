@@ -1,142 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:background="@drawable/background_gradient">
 
-    <!-- Priya's Form -->
-    <ScrollView
-        android:id="@+id/priya_container"
+    <!-- Welcome Back Overlay (shown when saved data exists) -->
+    <include
+        android:id="@+id/welcome_back_container"
+        layout="@layout/welcome_back_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- Main content: Forms + Confirmation -->
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
         android:visibility="visible">
 
-        <LinearLayout
+        <!-- Priya's Form -->
+        <ScrollView
+            android:id="@+id/priya_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/priya_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:fontFamily="@font/playfair_display"
+                    android:gravity="center"
+                    android:text="Priya 💖\nYour 10 Naughtiest Fantasies Tonight"
+                    android:textColor="#FF3366"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/priya_fantasies_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <Button
+                    android:id="@+id/save_priya_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/button_gradient_pink"
+                    android:paddingVertical="18dp"
+                    android:text="SAVE MY FANTASIES 🔥"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Akshay's Form -->
+        <ScrollView
+            android:id="@+id/akshay_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/akshay_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:fontFamily="@font/playfair_display"
+                    android:gravity="center"
+                    android:text="Akshay 💙\nYour 10 Dirtiest Fantasies Tonight"
+                    android:textColor="#3399FF"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/akshay_fantasies_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <Button
+                    android:id="@+id/save_akshay_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/button_gradient_blue"
+                    android:paddingVertical="18dp"
+                    android:text="SAVE MY FANTASIES 🔥"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Confirmation Screen -->
+        <LinearLayout
+            android:id="@+id/confirmation_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <TextView
-                android:id="@+id/priya_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="30dp"
                 android:fontFamily="@font/playfair_display"
                 android:gravity="center"
-                android:text="Priya 💖\nYour 10 Naughtiest Fantasies Tonight"
+                android:text="Everything Saved! 🔥💦"
                 android:textColor="#FF3366"
-                android:textSize="28sp"
+                android:textSize="32sp"
                 android:textStyle="bold" />
-
-            <LinearLayout
-                android:id="@+id/priya_fantasies_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-            <Button
-                android:id="@+id/save_priya_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/button_gradient_pink"
-                android:paddingVertical="18dp"
-                android:text="SAVE MY FANTASIES 🔥"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
-        </LinearLayout>
-    </ScrollView>
-
-    <!-- Akshay's Form (hidden initially) -->
-    <ScrollView
-        android:id="@+id/akshay_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/akshay_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="40dp"
-                android:fontFamily="@font/playfair_display"
+                android:layout_marginBottom="60dp"
                 android:gravity="center"
-                android:text="Akshay 💙\nYour 10 Dirtiest Fantasies Tonight"
-                android:textColor="#3399FF"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:id="@+id/akshay_fantasies_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-            <Button
-                android:id="@+id/save_akshay_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/button_gradient_blue"
-                android:paddingVertical="18dp"
-                android:text="SAVE MY FANTASIES 🔥"
-                android:textAllCaps="false"
+                android:text="Priya's naughty secrets are waiting for Akshay...\nAkshay's dirty desires are waiting for Priya..."
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/start_game_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_gradient_green"
+                android:paddingHorizontal="50dp"
+                android:paddingVertical="18dp"
+                android:text="START THE GAME →"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="20sp" />
         </LinearLayout>
-    </ScrollView>
-
-    <!-- Confirmation Screen -->
-    <LinearLayout
-        android:id="@+id/confirmation_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:fontFamily="@font/playfair_display"
-            android:gravity="center"
-            android:text="Everything Saved! 🔥💦"
-            android:textColor="#FF3366"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp"
-            android:gravity="center"
-            android:text="Priya's naughty secrets are waiting for Akshay...\nAkshay's dirty desires are waiting for Priya..."
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/start_game_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_gradient_green"
-            android:paddingHorizontal="50dp"
-            android:paddingVertical="18dp"
-            android:text="START THE GAME →"
-            android:textAllCaps="false"
-            android:textColor="#000000"
-            android:textSize="20sp" />
     </LinearLayout>
-</LinearLayout>
+</FrameLayout>

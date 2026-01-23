@@ -29,23 +29,21 @@ import kotlin.random.Random
 class MainActivity : AppCompatActivity() {
 
     private lateinit var heartsContainer: ConstraintLayout
-    private lateinit var versionDropdown: AutoCompleteTextView  // Make it class-level for access in adapter
+    private lateinit var versionDropdown: AutoCompleteTextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Find views
         val container: CardView = findViewById(R.id.container)
         heartsContainer = findViewById(R.id.inner_layout)
         val title: TextView = findViewById(R.id.title)
         val maleNameEt: TextInputEditText = findViewById(R.id.male_name)
         val femaleNameEt: TextInputEditText = findViewById(R.id.female_name)
-        versionDropdown = findViewById(R.id.version_dropdown)  // ← Class-level
+        versionDropdown = findViewById(R.id.version_dropdown)
         val loginBtn: Button = findViewById(R.id.login_btn)
 
-        // Dropdown versions
         val versions = listOf(
             "Select Your Desire Version",
             "Romantic ❤️",
@@ -58,7 +56,6 @@ class MainActivity : AppCompatActivity() {
             "Eternal Bond ♾️"
         )
 
-        // Custom Adapter
         class VersionAdapter(
             context: Context,
             private val items: List<String>,
@@ -86,7 +83,6 @@ class MainActivity : AppCompatActivity() {
                     else -> ""
                 }
 
-                // Click handling – use the class-level versionDropdown
                 view.setOnClickListener {
                     versionDropdown.setText(getItem(position), false)
                     versionDropdown.dismissDropDown()
@@ -100,12 +96,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Set adapter
         val adapter = VersionAdapter(this, versions, layoutInflater)
         versionDropdown.setAdapter(adapter)
         versionDropdown.setText(versions[0], false)
 
-        // Glowing title gradient – fixed width issue
         title.post {
             val gradient = LinearGradient(
                 0f, 0f, title.width.toFloat(), 0f,
@@ -120,7 +114,6 @@ class MainActivity : AppCompatActivity() {
             title.paint.shader = gradient
         }
 
-        // Pulse glow animation
         val glowAnimator = ValueAnimator.ofFloat(1.0f, 1.05f)
         glowAnimator.duration = 3500
         glowAnimator.repeatMode = ValueAnimator.REVERSE
@@ -131,7 +124,6 @@ class MainActivity : AppCompatActivity() {
         }
         glowAnimator.start()
 
-        // Fade-in & scale animation on load
         container.alpha = 0f
         container.scaleX = 0.85f
         container.scaleY = 0.85f
@@ -141,7 +133,6 @@ class MainActivity : AppCompatActivity() {
         ObjectAnimator.ofFloat(container, "scaleY", 0.85f, 1f).apply { duration = 1200 }.start()
         ObjectAnimator.ofFloat(container, "translationY", 40f, 0f).apply { duration = 1200 }.start()
 
-        // Button press effect
         loginBtn.setOnTouchListener { v, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> v.scaleY = 0.97f
@@ -150,7 +141,6 @@ class MainActivity : AppCompatActivity() {
             false
         }
 
-        // Floating hearts
         fun createHeart() {
             val heart = TextView(this@MainActivity).apply {
                 text = "❤️"
@@ -201,7 +191,6 @@ class MainActivity : AppCompatActivity() {
         }
         handler.postDelayed(heartRunnable, 600)
 
-        // Login button logic
         loginBtn.setOnClickListener {
             val maleName = maleNameEt.text.toString().trim()
             val femaleName = femaleNameEt.text.toString().trim()

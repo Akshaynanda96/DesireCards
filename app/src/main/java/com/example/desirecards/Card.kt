@@ -5,12 +5,14 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
+import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -96,11 +98,33 @@ class Card : AppCompatActivity() {
 
         playBtn.setOnClickListener {
             if (currentVideoUrl != null && currentVideoUrl!!.isNotBlank()) {
-                val intent = Intent(this, VideoActivity::class.java)
-                intent.putExtra("VIDEO_URL", currentVideoUrl)  // Pass the URL
-                startActivity(intent)
+
+                val urlsLink = currentVideoUrl!! // Your dynamic link, e.g. "https://www.reddit.com/r/..."
+
+                val redditLinkStart = "https://www.reddit.com/"
+                val url = urlsLink   // use ONE variable consistently
+
+                if (url?.startsWith(redditLinkStart) == true) {
+
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                    intent.setPackage("com.reddit.frontpage") // force Reddit app
+
+                    try {
+                        startActivity(intent)
+                    } catch (e: ActivityNotFoundException) {
+                        // Reddit app not installed → open in browser
+                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                        Toast.makeText(this, "Reddit app not installed, opened in browser", Toast.LENGTH_SHORT).show()
+                    }
+
+                } else {
+                    // Not a Reddit link → open in browser
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                    Toast.makeText(this, "Opened in browser (not a Reddit link)", Toast.LENGTH_SHORT).show()
+                }
+
             } else {
-                Toast.makeText(this, "No video available for this task", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "No link available for this task", Toast.LENGTH_SHORT).show()
             }
         }
     }
